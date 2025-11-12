@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ мерча компании</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="games.html" class="nav-link">Игры</a></li>
+            <li><a href="about.html" class="nav-link">О компании</a></li>
+            <li><a href="contact.html" class="nav-link">Контакты</a></li>
+            <li><a href="order_merch.html" class="nav-link">Заказ мерча</a></li>
+            <li><a href="https://www.blizzard.com" target="_blank" class="external-link">Официальный сайт</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Заказ мерча компании</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Доступный товар</h2>
+
+            <div class="merch-preview">
+                <div class="merch-item">
+                    <img src="images/merch1.png" alt="Толстовка Overwatch" style="width: 80px; height: auto;">
+                    <p>Толстовка Overwatch</p>
+                    <p>Цена: 4500 ₽</p>
+                </div>
+                <div class="merch-item">
+                    <img src="images/merch.png" alt="Кружка BlizzCon" style="width: 80px; height: auto;">
+                    <p>Кружка BlizzCon</p>
+                    <p>Цена: 3500 ₽</p>
+                </div>
+                <div class="merch-item">
+                    <img src="images/merch2.png" alt="Рюкзак BlizzCon" style="width: 80px; height: auto;">
+                    <p>Рюкзак BlizzCon</p>
+                    <p>Цена: 5000 ₽</p>
+                </div>
+            </div>
+
+            <h2>Заполните форму для заказа мерча</h2>
+
+            <form action="https://www.bing.com/?scope=web&cc=DE" method="get">
+                <ul>
+                    <li>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" value="Иван" required>
+                    </li>
+
+                    <li>
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" value="example@example.ru" required>
+                    </li>
+
+                    <li>
+                        <label for="phone">Ваш телефон:</label>
+                        <input type="tel" id="phone" name="phone" value="+7 123 456 78 90" required>
+                    </li>
+
+                    <li>
+                        <label for="address">Ваш адрес:</label>
+                        <input type="text" id="address" name="address" value="Красная площадь" required>
+                    </li>

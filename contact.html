@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты – Blizzard Entertainment</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Главная</a></li>
+            <li><a href="games.html" class="nav-link">Игры</a></li>
+            <li><a href="about.html" class="nav-link">О компании</a></li>
+            <li><a href="contact.html" class="nav-link">Контакты</a></li>
+            <li><a href="order_merch.html" class="nav-link">Заказ мерча</a></li>
+            <li><a href="https://www.blizzard.com" target="_blank" class="external-link">Официальный сайт</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Контакты</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Контактная информация</h2>
+            <ul>
+                <li><strong>Электронная почта:</strong> <a href="mailto:tours@blizzard.com">tours@blizzard.com</a></li>
+                <li><strong>Офис (Европа):</strong> Prinses Beatrixlaan 582, WTC The Hague, Tower E, 6th Floor, 2595 BM The Hague, Netherlands</li>
+                <li><strong>Корпоративный адрес:</strong> One Blizzard Way, Irvine, CA 92618-3616, USA</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Свяжитесь с нами</h2>
+            <p>Заполните форму, чтобы задать вопрос или отправить предложение:</p>
+
+            <!-- Форма с автозаполнением, action обновлен -->
+            <form action="https://www.bing.com/?scope=web&cc=DE" method="get">
+                <ul>
+                    <li>
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" value="Иван" required>
+                    </li>
+
+                    <li>
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" name="email" value="example@example.ru" required>
+                    </li>
+
+                    <li>
+                        <label for="message">Ваше сообщение:</label>
+                        <input id="message" name="message" value="пример текста" required></input>
+                    </li>
+
+                    <li>
+                        <button type="submit" class="submit-btn">Отправить</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
