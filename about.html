@@ -6,8 +6,19 @@
     <title>О компании Blizzard Entertainment</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .white-text {
-            color: white;
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .scroll-to-top-btn:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -16,7 +27,7 @@
         <ul>
             <li><a href="index.html" class="nav-link">Главная</a></li>
             <li><a href="games.html" class="nav-link">Игры</a></li>
-            <li><a href="about.html" class="nav-link"><strong>О компании</strong></a></li>
+            <li><a href="about.html" class="nav-link"><strong>О компании</strong>О компании</a></li>
             <li><a href="contact.html" class="nav-link">Контакты</a></li>
             <li><a href="order_merch.html" class="nav-link">Заказ мерча</a></li>
             <li><a href="https://www.blizzard.com" target="_blank" class="external-link">Официальный сайт</a></li>
@@ -79,9 +90,18 @@
             </table>
         </section>
 
+        <button onclick="scrollToTop()" class="scroll-to-top-btn">Наверх</button>
     </main>
 
     <script src="js/script.js"></script>
-</body>
 
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
 </html>
