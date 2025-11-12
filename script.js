@@ -1,9 +1,0 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.nav-link');
-    const current = window.location.pathname.split('/').pop();
-    links.forEach(link => {
-        if (link.getAttribute('href') === current) {
-            link.classList.add('active');
-        }
-    });
-});
