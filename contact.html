@@ -24,34 +24,58 @@
 
     <main>
         <section>
-            <h2>Контактная информация</h2>
-            <ul>
-                <li><strong>Электронная почта:</strong> <a href="mailto:tours@blizzard.com">tours@blizzard.com</a></li>
-                <li><strong>Офис (Европа):</strong> Prinses Beatrixlaan 582, WTC The Hague, Tower E, 6th Floor, 2595 BM The Hague, Netherlands</li>
-                <li><strong>Корпоративный адрес:</strong> One Blizzard Way, Irvine, CA 92618-3616, USA</li>
-            </ul>
-        </section>
-
-        <section>
             <h2>Свяжитесь с нами</h2>
             <p>Заполните форму, чтобы задать вопрос или отправить предложение:</p>
 
-            <!-- Форма с автозаполнением, action обновлен -->
+            
             <form action="https://www.bing.com/?scope=web&cc=DE" method="get">
                 <ul>
+                    
                     <li>
                         <label for="name">Ваше имя:</label>
                         <input type="text" id="name" name="name" value="Иван" required>
                     </li>
 
+                    
                     <li>
                         <label for="email">Ваш Email:</label>
                         <input type="email" id="email" name="email" value="example@example.ru" required>
                     </li>
 
+                    
                     <li>
-                        <label for="message">Ваше сообщение:</label>
-                        <input id="message" name="message" value="пример текста" required></input>
+                        <label for="age">Ваш возраст:</label>
+                        <input type="number" id="age" name="age" value="25" required>
+                    </li>
+
+                    
+                    <li>
+                        <label for="contact-method">Способ связи:</label>
+                        <input type="radio" id="email-contact" name="contact-method" value="email" checked> Email
+                        <input type="radio" id="phone-contact" name="contact-method" value="phone"> Телефон
+                    </li>
+
+                   
+                    <li>
+                        <label for="newsletter">Подписаться на новостную рассылку:</label>
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    </li>
+
+                    
+                    <li>
+                        <label for="date">Дата сообщения:</label>
+                        <input type="date" id="date" name="date" value="2025-11-12" required>
+                    </li>
+
+                    
+                    <li>
+                        <label for="password">Ключевое слово:</label>
+                        <input type="password" id="password" name="password" value="secretPassword123" required>
+                    </li>
+
+                    
+                    <li>
+                        <input type="hidden" name="form_source" value="contact_form">
                     </li>
 
                     <li>
