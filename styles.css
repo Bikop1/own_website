@@ -1,11 +1,9 @@
-/* Общие настройки */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background-color: #0b0c10;
     color: #c5c6c7;
 }
 
-/* Навигация */
 .navbar-brand,
 .nav-link {
     font-weight: 500;
@@ -15,29 +13,24 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* Подсветка активной страницы */
 .nav-link.active {
     color: #66fcf1 !important;
 }
 
-/* Главный баннер */
 .hero {
     padding: 4rem 0;
     text-align: center;
 }
 
-/* Карточки игр/контента */
 .game-card {
     margin-bottom: 1.5rem;
 }
 
-/* Внутренняя навигация по странице */
 .page-nav a {
     display: block;
     margin-bottom: 0.5rem;
 }
 
-/* Картинки с подписями */
 .figure-custom img {
     max-width: 100%;
     border-radius: 0.5rem;
@@ -49,32 +42,27 @@ body {
     color: #9a9da1;
 }
 
-/* Кнопка "Наверх" */
 .back-to-top {
     display: inline-block;
     margin-top: 1rem;
     font-size: 0.9rem;
 }
 
-/* Форма */
 .required::after {
     content: " *";
     color: #ff6b6b;
 }
-/* Общие */
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Контейнер по ширине */
 .main-container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 16px 32px;
 }
 
-/* Верхнее меню */
 .site-header {
     background: #111;
     padding: 12px 0;
@@ -101,13 +89,11 @@ body {
     background: #333;
 }
 
-/* Подсветка активного пункта */
 .site-nav a.active {
     background: #007bff;
     color: #fff;
 }
 
-/* Внутренняя навигация по странице */
 .page-nav {
     margin: 16px 0;
     padding: 8px 12px;
@@ -119,7 +105,6 @@ body {
     margin-right: 12px;
 }
 
-/* Картинки с подписями */
 figure {
     margin: 1rem 0;
 }
@@ -137,26 +122,24 @@ figcaption {
     margin-top: 4px;
 }
 
-/* Кнопка "Наверх" */
 .back-to-top {
     display: inline-block;
     margin-top: 16px;
     font-size: 0.9rem;
 }
 
-/* Форма */
 .required::after {
     content: " *";
     color: #ff6b6b;
 }
 
-/* Адаптив для маленьких экранов */
 @media (max-width: 600px) {
     .site-nav {
         flex-direction: column;
         align-items: flex-start;
     }
 }
+
 
 
 
