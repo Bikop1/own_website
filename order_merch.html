@@ -2,85 +2,101 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Заказ мерча | Мой сайт</title>
+    <title>Заказ мерча компании Blizzard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Мой сайт</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Обо мне</a></li>
-        <li class="nav-item"><a class="nav-link" href="games.html">Игры</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
-        <li class="nav-item"><a class="nav-link active" href="order_merch.html">Заказ мерча</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<header class="site-header">
+    <nav class="main-container">
+        <ul class="site-nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html">Игры</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="order_merch.html" class="active">Заказ мерча</a></li>
+            <li><a href="https://www.blizzard.com">Официальный сайт</a></li>
+        </ul>
+    </nav>
+</header>
 
-<main class="container my-4">
-  <h1>Заказ мерча</h1>
-  <p>Заполни форму, чтобы отправить заказ на удалённый сервер.</p>
+<main class="main-container">
+    <h1>Заказ мерча компании</h1>
 
-  <form class="row g-3" method="post" action="https://httpbin.org/post">
-    <div class="col-md-6">
-      <label for="customerName" class="form-label required">Имя</label>
-      <input type="text" class="form-control" id="customerName" name="customer_name" required>
-    </div>
+    <section>
+        <h2>Доступный товар</h2>
 
-    <div class="col-md-6">
-      <label for="customerEmail" class="form-label required">Email</label>
-      <input type="email" class="form-control" id="customerEmail" name="customer_email" required>
-    </div>
+        <figure>
+            <img src="images/hoodie_overwatch.jpg" alt="Толстовка Overwatch">
+            <figcaption>Толстовка Overwatch — 4500 ₽</figcaption>
+        </figure>
 
-    <div class="col-md-6">
-      <label for="productName" class="form-label required">Название мерча</label>
-      <input type="text" class="form-control" id="productName" name="product_name" required>
-    </div>
+        <figure>
+            <img src="images/mug_blizzcon.jpg" alt="Кружка BlizzCon">
+            <figcaption>Кружка BlizzCon — 3500 ₽</figcaption>
+        </figure>
 
-    <div class="col-md-6">
-      <label for="quantity" class="form-label required">Количество</label>
-      <input type="number" min="1" max="99" class="form-control" id="quantity" name="quantity" required>
-    </div>
+        <figure>
+            <img src="images/backpack_blizzcon.jpg" alt="Рюкзак BlizzCon">
+            <figcaption>Рюкзак BlizzCon — 5000 ₽</figcaption>
+        </figure>
+    </section>
 
-    <div class="col-12">
-      <span class="form-label d-block required">Тип мерча</span>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="merch_type" id="type_tshirt" value="tshirt" required>
-        <label class="form-check-label" for="type_tshirt">Футболка</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="merch_type" id="type_hoodie" value="hoodie">
-        <label class="form-check-label" for="type_hoodie">Худи</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="merch_type" id="type_mug" value="mug">
-        <label class="form-check-label" for="type_mug">Кружка</label>
-      </div>
-    </div>
+    <section>
+        <h2>Заполните форму для заказа мерча</h2>
 
-    <div class="col-12">
-      <label for="comment" class="form-label">Комментарий к заказу</label>
-      <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Например, желаемый цвет или размер"></textarea>
-    </div>
+        <!-- Форма: text + number + radio, required, отправка на удалённый сервер -->
+        <form method="post" action="https://httpbin.org/post">
+            <p>
+                <label class="required" for="customer-name">Ваше имя:</label><br>
+                <input type="text" id="customer-name" name="customer_name" required>
+            </p>
 
-    <div class="col-12">
-      <button type="submit" class="btn btn-success">Отправить заказ</button>
-    </div>
-  </form>
+            <p>
+                <label class="required" for="customer-email">Ваш Email:</label><br>
+                <input type="email" id="customer-email" name="customer_email" required>
+            </p>
 
-  <a href="#top" class="back-to-top">Наверх ▲</a>
+            <p>
+                <label class="required" for="customer-phone">Ваш телефон:</label><br>
+                <input type="text" id="customer-phone" name="customer_phone" required>
+            </p>
+
+            <p>
+                <label class="required" for="customer-address">Ваш адрес:</label><br>
+                <input type="text" id="customer-address" name="customer_address" required>
+            </p>
+
+            <p>
+                <span class="required">Выберите товар:</span><br>
+                <label>
+                    <input type="radio" name="product_type" value="hoodie_overwatch" required>
+                    Толстовка Overwatch (4500 ₽)
+                </label><br>
+                <label>
+                    <input type="radio" name="product_type" value="mug_blizzcon">
+                    Кружка BlizzCon (3500 ₽)
+                </label><br>
+                <label>
+                    <input type="radio" name="product_type" value="backpack_blizzcon">
+                    Рюкзак BlizzCon (5000 ₽)
+                </label>
+            </p>
+
+            <p>
+                <label class="required" for="product-qty">Количество:</label><br>
+                <input type="number" id="product-qty" name="product_quantity" min="1" max="10" value="1" required>
+            </p>
+
+            <p>
+                <button type="submit">Отправить</button>
+            </p>
+        </form>
+    </section>
+
+    <a href="#top" class="back-to-top">Наверх ▲</a>
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
