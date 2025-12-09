@@ -2,105 +2,79 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О компании Blizzard Entertainment</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .scroll-to-top-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: transparent;
-            color: black;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .scroll-to-top-btn:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Обо мне | Мой сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="nav-link">Главная</a></li>
-            <li><a href="games.html" class="nav-link">Игры</a></li>
-            <li><a href="about.html" class="nav-link"><strong>О компании</strong>О компании</a></li>
-            <li><a href="contact.html" class="nav-link">Контакты</a></li>
-            <li><a href="order_merch.html" class="nav-link">Заказ мерча</a></li>
-            <li><a href="https://www.blizzard.com" target="_blank" class="external-link">Официальный сайт</a></li>
-        </ul>
+<body id="top">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Мой сайт</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">Обо мне</a></li>
+        <li class="nav-item"><a class="nav-link" href="games.html">Игры</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link" href="order_merch.html">Заказ мерча</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+  <div class="row">
+    <!-- Внутренняя навигация по странице -->
+    <nav class="col-md-3 page-nav">
+      <h5>Навигация по странице</h5>
+      <a href="#bio">Кто я</a>
+      <a href="#hobbies">Хобби</a>
+      <a href="#setup">Игровой сетап</a>
+      <a href="#goals">Цели</a>
+      <a href="#top" class="back-to-top">К началу страницы ▲</a>
     </nav>
 
-    <header>
-        <h1>О компании Blizzard Entertainment</h1>
-    </header>
+    <div class="col-md-9">
+      <section id="bio" class="mb-4">
+        <h2>Кто я</h2>
+        <p>Тут можешь оставить свой текст о себе: где учишься, чем увлекаешься, какие жанры игр любишь и т.д.</p>
+      </section>
 
-    <main>
-        <section>
-            <h2>Наша миссия</h2>
-            <p>Blizzard Entertainment — это ведущий разработчик и издатель видеоигр, известный своими культовыми проектами, такими как Warcraft, Diablo, Overwatch и многими другими. Наша миссия заключается в создании игр, которые не только развлекают, но и вдохновляют игроков по всему миру.</p>
-        </section>
+      <section id="hobbies" class="mb-4">
+        <h2>Хобби</h2>
+        <p>Опиши свои увлечения: стримы, киберспорт, создание контента, программирование и т.д.</p>
 
-        <section>
-            <h2>История Blizzard Entertainment</h2>
-            <p>Blizzard Entertainment была основана в 1991 году под названием Silicon & Synapse. Компания быстро приобрела известность благодаря инновационному подходу к разработке игр. В 1994 году она выпустила первую игру в серии Warcraft, которая стала знаковой для жанра стратегий в реальном времени (RTS).</p>
-            <p>В 1996 году компания сменила название на Blizzard Entertainment и продолжила создавать игры, которые изменили индустрию, такие как Diablo, StarCraft и Overwatch. Эти игры не только привлекли миллионы поклонников по всему миру, но и создали целые сообщества игроков, которые стали неотъемлемой частью Blizzard.</p>
-        </section>
+        <figure class="figure-custom">
+          <img src="images/hobby.jpg" alt="Я за компьютером">
+          <figcaption>Моё основное хобби — игры и всё, что с ними связано.</figcaption>
+        </figure>
+      </section>
 
-        <section>
-            <h2>Известные игры компании</h2>
-            <p>Blizzard Entertainment известна своими культовыми играми, такими как:</p>
-            <ul>
-                <li><strong>Warcraft</strong> — эпическая стратегия в реальном времени, ставшая основой для жанра MMORPG.</li>
-                <li><strong>Diablo</strong> — культовая RPG, исследующая подземелья и битвы с демонами.</li>
-                <li><strong>Overwatch</strong> — командный шутер с уникальными героями и динамичной игровой атмосферой.</li>
-            </ul>
-        </section>
+      <section id="setup" class="mb-4">
+        <h2>Игровой сетап</h2>
+        <p>Кратко расскажи о своём ПК или консоли, периферии и т.д.</p>
 
-        <section class="white-text">
-            <h2>Самые популярные игры</h2>
-            <table style="width:100%; background-image: url('images/png.png'); background-size: cover; background-position: center;">
-                <thead>
-                    <tr>
-                        <th>Игра</th>
-                        <th>Изображение</th>
-                        <th>Ссылка</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Warcraft</td>
-                        <td><a href="images/warcraft_large.png" target="_blank"><img src="images/warcraft.png" alt="Warcraft" style="width: 100px;"></a></td>
-                        <td><a href="games.html#warcraft" class="white-text">Подробнее</a></td>
-                    </tr>
-                    <tr>
-                        <td>Diablo</td>
-                        <td><a href="images/diablo_large.png" target="_blank"><img src="images/diablo.png" alt="Diablo" style="width: 100px;"></a></td>
-                        <td><a href="games.html#diablo" class="white-text">Подробнее</a></td>
-                    </tr>
-                    <tr>
-                        <td>Overwatch</td>
-                        <td><a href="images/overwatch_large.png" target="_blank"><img src="images/overwatch.png" alt="Overwatch" style="width: 100px;"></a></td>
-                        <td><a href="games.html#overwatch" class="white-text">Подробнее</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <figure class="figure-custom">
+          <img src="images/setup.jpg" alt="Игровой сетап">
+          <figcaption>Так примерно выглядит мой игровой уголок.</figcaption>
+        </figure>
+      </section>
 
-        <button onclick="scrollToTop()" class="scroll-to-top-btn">Наверх</button>
-    </main>
+      <section id="goals" class="mb-4">
+        <h2>Цели</h2>
+        <p>Напиши, чему хочешь научиться: разработка игр, веб-разработка, дизайн, стриминг и прочее.</p>
+      </section>
 
-    <script>
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+      <a href="#top" class="back-to-top">Наверх ▲</a>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
