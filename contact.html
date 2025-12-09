@@ -28,20 +28,20 @@
         <h2>Свяжитесь с нами</h2>
         <p>Заполните форму, чтобы задать вопрос или отправить предложение:</p>
 
-        <form method="post" action="https://httpbin.org/post">
+        <form method="post" action="https://www.bing.com/">
             <p>
                 <label class="required" for="contact-name">Ваше имя:</label><br>
-                <input type="text" id="contact-name" name="contact_name" required>
+                <input type="text" id="contact-name" name="contact_name" value="Иван" required>
             </p>
 
             <p>
                 <label class="required" for="contact-email">Ваш Email:</label><br>
-                <input type="email" id="contact-email" name="contact_email" required>
+                <input type="email" id="contact-email" name="contact_email" value="example@example.ru" required>
             </p>
 
             <p>
                 <label class="required" for="contact-age">Ваш возраст:</label><br>
-                <input type="number" id="contact-age" name="contact_age" min="1" max="120" required>
+                <input type="number" id="contact-age" name="contact_age" min="1" max="120" value="18" required>
             </p>
 
             <p>
@@ -49,22 +49,7 @@
                 <label><input type="radio" name="contact_method" value="email" required> Email</label><br>
                 <label><input type="radio" name="contact_method" value="phone"> Телефон</label>
             </p>
-
-            <p>
-                <label for="subscribe">Подписаться на новостную рассылку:</label>
-                <input type="checkbox" id="subscribe" name="subscribe_news">
-            </p>
-
-            <p>
-                <label for="contact-date">Дата сообщения:</label><br>
-                <input type="date" id="contact-date" name="contact_date">
-            </p>
-
-            <p>
-                <label for="keyword">Ключевое слово:</label><br>
-                <input type="text" id="keyword" name="keyword" placeholder="например, Diablo">
-            </p>
-
+            
             <p>
                 <button type="submit">Отправить</button>
             </p>
@@ -76,3 +61,4 @@
 
 </body>
 </html>
+
