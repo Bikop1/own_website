@@ -27,24 +27,17 @@
     <p>Ниже представлен список популярных игр Blizzard.</p>
 
     <section id="games-list">
-        <!-- Карточки игр появятся здесь через JS -->
     </section>
 
     <a href="#top" class="back-to-top">Наверх ▲</a>
 </main>
 
 <script>
-    // Массив игр (8 штук — достаточно для требования 6–12 блоков)
     const games = [
         {
             title: "Warcraft / World of Warcraft",
             description: "Массовая многопользовательская ролевая онлайн-игра во вселенной Warcraft.",
             img: "images/warcraft.jpg"
-        },
-        {
-            title: "Overwatch",
-            description: "Серия многопользовательских игр в жанре геройского шутера от первого лица.",
-            img: "images/overwatch.jpg"
         },
         {
             title: "Diablo",
@@ -69,13 +62,8 @@
         {
             title: "Overwatch 2",
             description: "Продолжение популярного командного шутера с обновлёнными режимами и героями.",
-            img: "images/overwatch2.jpg"
+            img: "images/overwatch.jpg"
         },
-        {
-            title: "Diablo IV",
-            description: "Новая часть серии Diablo с открытым миром и совместным прохождением.",
-            img: "images/diablo4.jpg"
-        }
     ];
 
     const gamesList = document.getElementById("games-list");
@@ -96,4 +84,5 @@
 
 </body>
 </html>
+
 
