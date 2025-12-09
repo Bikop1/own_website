@@ -2,82 +2,85 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заказ мерча компании</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Заказ мерча | Мой сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="nav-link">Главная</a></li>
-            <li><a href="games.html" class="nav-link">Игры</a></li>
-            <li><a href="about.html" class="nav-link">О компании</a></li>
-            <li><a href="contact.html" class="nav-link">Контакты</a></li>
-            <li><a href="order_merch.html" class="nav-link"><strong>Заказ мерча</strong></a></li>
-            <li><a href="https://www.blizzard.com" target="_blank" class="external-link">Официальный сайт</a></li>
-        </ul>
-    </nav>
+<body id="top">
 
-    <header>
-        <h1>Заказ мерча компании</h1>
-    </header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Мой сайт</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Обо мне</a></li>
+        <li class="nav-item"><a class="nav-link" href="games.html">Игры</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+        <li class="nav-item"><a class="nav-link active" href="order_merch.html">Заказ мерча</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <main>
-        <section>
-            <h2>Доступный товар</h2>
+<main class="container my-4">
+  <h1>Заказ мерча</h1>
+  <p>Заполни форму, чтобы отправить заказ на удалённый сервер.</p>
 
-            <div class="merch-preview">
-                <div class="merch-item">
-                    <img src="images/merch1.png" alt="Толстовка Overwatch" style="width: 80px; height: auto;">
-                    <p>Толстовка Overwatch</p>
-                    <p>Цена: 4500 ₽</p>
-                </div>
-                <div class="merch-item">
-                    <img src="images/merch.png" alt="Кружка BlizzCon" style="width: 80px; height: auto;">
-                    <p>Кружка BlizzCon</p>
-                    <p>Цена: 3500 ₽</p>
-                </div>
-                <div class="merch-item">
-                    <img src="images/merch2.png" alt="Рюкзак BlizzCon" style="width: 80px; height: auto;">
-                    <p>Рюкзак BlizzCon</p>
-                    <p>Цена: 5000 ₽</p>
-                </div>
-            </div>
+  <form class="row g-3" method="post" action="https://httpbin.org/post">
+    <div class="col-md-6">
+      <label for="customerName" class="form-label required">Имя</label>
+      <input type="text" class="form-control" id="customerName" name="customer_name" required>
+    </div>
 
-            <h2>Заполните форму для заказа мерча</h2>
+    <div class="col-md-6">
+      <label for="customerEmail" class="form-label required">Email</label>
+      <input type="email" class="form-control" id="customerEmail" name="customer_email" required>
+    </div>
 
-            <form action="https://www.bing.com/?scope=web&cc=DE" method="get">
-                <ul>
-                    <li>
-                        <label for="name">Ваше имя:</label>
-                        <input type="text" id="name" name="name" value="Иван" required>
-                    </li>
+    <div class="col-md-6">
+      <label for="productName" class="form-label required">Название мерча</label>
+      <input type="text" class="form-control" id="productName" name="product_name" required>
+    </div>
 
-                    <li>
-                        <label for="email">Ваш Email:</label>
-                        <input type="email" id="email" name="email" value="example@example.ru" required>
-                    </li>
+    <div class="col-md-6">
+      <label for="quantity" class="form-label required">Количество</label>
+      <input type="number" min="1" max="99" class="form-control" id="quantity" name="quantity" required>
+    </div>
 
-                    <li>
-                        <label for="phone">Ваш телефон:</label>
-                        <input type="tel" id="phone" name="phone" value="+7 123 456 78 90" required>
-                    </li>
+    <div class="col-12">
+      <span class="form-label d-block required">Тип мерча</span>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="merch_type" id="type_tshirt" value="tshirt" required>
+        <label class="form-check-label" for="type_tshirt">Футболка</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="merch_type" id="type_hoodie" value="hoodie">
+        <label class="form-check-label" for="type_hoodie">Худи</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="merch_type" id="type_mug" value="mug">
+        <label class="form-check-label" for="type_mug">Кружка</label>
+      </div>
+    </div>
 
-                    <li>
-                        <label for="address">Ваш адрес:</label>
-                        <input type="text" id="address" name="address" value="Красная площадь" required>
-                    </li>
+    <div class="col-12">
+      <label for="comment" class="form-label">Комментарий к заказу</label>
+      <textarea class="form-control" id="comment" name="comment" rows="3" placeholder="Например, желаемый цвет или размер"></textarea>
+    </div>
 
-                    <li>
-                        <button type="submit" class="submit-btn">Отправить</button>
-                    </li>
-                </ul>
-            </form>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success">Отправить заказ</button>
+    </div>
+  </form>
 
-        </section>
-    </main>
+  <a href="#top" class="back-to-top">Наверх ▲</a>
+</main>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
