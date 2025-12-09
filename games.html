@@ -2,78 +2,97 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Игры | Мой сайт</title>
+    <title>Игры компании Blizzard Entertainment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Мой сайт</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">Обо мне</a></li>
-        <li class="nav-item"><a class="nav-link active" href="games.html">Игры</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
-        <li class="nav-item"><a class="nav-link" href="order_merch.html">Заказ мерча</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<header class="site-header">
+    <nav class="main-container">
+        <ul class="site-nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html" class="active">Игры</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="order_merch.html">Заказ мерча</a></li>
+            <li><a href="https://www.blizzard.com">Официальный сайт</a></li>
+        </ul>
+    </nav>
+</header>
 
-<main class="container my-4">
-  <header class="mb-4">
-    <h1>Мои любимые игры</h1>
-    <p>Список формируется с помощью JavaScript. Каждая карточка — повторяющийся блок с разными данными.</p>
-  </header>
+<main class="main-container">
+    <h1>Игры компании Blizzard Entertainment</h1>
 
-  <div class="row" id="gamesContainer">
-    <!-- Карточки будут добавлены скриптом -->
-  </div>
+    <p>Ниже представлен список популярных игр Blizzard. Карточки формируются с помощью JavaScript (повторяющиеся блоки).</p>
 
-  <a href="#top" class="back-to-top">Наверх ▲</a>
+    <section id="games-list">
+        <!-- Карточки игр появятся здесь через JS -->
+    </section>
+
+    <a href="#top" class="back-to-top">Наверх ▲</a>
 </main>
 
 <script>
-  // Массив объектов — 8 игр (можно дописать свои)
-  const games = [
-    { title: "The Witcher 3", genre: "RPG", hours: 120, img: "images/witcher3.jpg" },
-    { title: "Cyberpunk 2077", genre: "RPG / Action", hours: 60, img: "images/cyberpunk.jpg" },
-    { title: "CS2", genre: "Shooter", hours: 500, img: "images/cs2.jpg" },
-    { title: "Valorant", genre: "Shooter", hours: 250, img: "images/valorant.jpg" },
-    { title: "Minecraft", genre: "Sandbox", hours: 300, img: "images/minecraft.jpg" },
-    { title: "GTA V", genre: "Action", hours: 200, img: "images/gtav.jpg" },
-    { title: "League of Legends", genre: "MOBA", hours: 400, img: "images/lol.jpg" },
-    { title: "Fortnite", genre: "Battle Royale", hours: 150, img: "images/fortnite.jpg" }
-  ];
+    // Массив игр (8 штук — достаточно для требования 6–12 блоков)
+    const games = [
+        {
+            title: "Warcraft / World of Warcraft",
+            description: "Массовая многопользовательская ролевая онлайн-игра во вселенной Warcraft.",
+            img: "images/warcraft.jpg"
+        },
+        {
+            title: "Overwatch",
+            description: "Серия многопользовательских игр в жанре геройского шутера от первого лица.",
+            img: "images/overwatch.jpg"
+        },
+        {
+            title: "Diablo",
+            description: "Серия игр в жанре Action/RPG о борьбе с силами зла в мрачном мире Санктуария.",
+            img: "images/diablo.jpg"
+        },
+        {
+            title: "StarCraft",
+            description: "Культовая стратегия в реальном времени о противостоянии трёх рас во вселенной будущего.",
+            img: "images/starcraft.jpg"
+        },
+        {
+            title: "Hearthstone",
+            description: "Коллекционная карточная игра по мотивам вселенной Warcraft.",
+            img: "images/hearthstone.jpg"
+        },
+        {
+            title: "Heroes of the Storm",
+            description: "Командная MOBA-игра с героями из разных игр Blizzard.",
+            img: "images/hots.jpg"
+        },
+        {
+            title: "Overwatch 2",
+            description: "Продолжение популярного командного шутера с обновлёнными режимами и героями.",
+            img: "images/overwatch2.jpg"
+        },
+        {
+            title: "Diablo IV",
+            description: "Новая часть серии Diablo с открытым миром и совместным прохождением.",
+            img: "images/diablo4.jpg"
+        }
+    ];
 
-  const container = document.getElementById("gamesContainer");
+    const gamesList = document.getElementById("games-list");
 
-  games.forEach(game => {
-    const col = document.createElement("div");
-    col.className = "col-sm-6 col-lg-3";
-
-    col.innerHTML = `
-      <div class="card bg-dark text-light game-card h-100">
-        <img src="${game.img}" class="card-img-top" alt="${game.title}">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">${game.title}</h5>
-          <p class="card-text mb-1"><strong>Жанр:</strong> ${game.genre}</p>
-          <p class="card-text"><strong>Часы в игре:</strong> ${game.hours}+</p>
-        </div>
-      </div>
-    `;
-
-    container.appendChild(col);
-  });
+    games.forEach(game => {
+        const article = document.createElement("article");
+        article.innerHTML = `
+            <figure>
+                <img src="${game.img}" alt="${game.title}">
+                <figcaption><strong>${game.title}</strong></figcaption>
+            </figure>
+            <p>${game.description}</p>
+            <hr>
+        `;
+        gamesList.appendChild(article);
+    });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
