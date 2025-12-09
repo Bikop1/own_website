@@ -21,20 +21,41 @@
     </nav>
 </header>
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игры компании Blizzard Entertainment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<header class="site-header">
+    <nav class="main-container">
+        <ul class="site-nav">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="games.html" class="active">Игры</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="order_merch.html">Заказ мерча</a></li>
+            <li><a href="https://www.blizzard.com">Официальный сайт</a></li>
+        </ul>
+    </nav>
+</header>
+
 <main class="main-container">
     <h1>Игры компании Blizzard Entertainment</h1>
 
-    <p>Ниже представлен список популярных игр Blizzard. Карточки формируются с помощью JavaScript (повторяющиеся блоки).</p>
+    <p>Ниже представлен список популярных игр Blizzard.</p>
 
     <section id="games-list">
-        <!-- Карточки игр появятся здесь через JS -->
     </section>
 
     <a href="#top" class="back-to-top">Наверх ▲</a>
 </main>
 
 <script>
-    // Массив игр (8 штук — как раз 6–12 повторений)
     const games = [
         {
             title: "Warcraft / World of Warcraft",
@@ -42,18 +63,13 @@
             img: "images/warcraft.jpg"
         },
         {
-            title: "Overwatch",
-            description: "Серия многопользовательских игр в жанре геройского шутера от первого лица.",
-            img: "images/overwatch.jpg"
-        },
-        {
             title: "Diablo",
-            description: "Action/RPG о борьбе с силами зла в мрачном мире Санктуария.",
+            description: "Серия игр в жанре Action/RPG о борьбе с силами зла в мрачном мире Санктуария.",
             img: "images/diablo.jpg"
         },
         {
             title: "StarCraft",
-            description: "Знаковая стратегия в реальном времени о противостоянии трёх рас.",
+            description: "Культовая стратегия в реальном времени о противостоянии трёх рас во вселенной будущего.",
             img: "images/starcraft.jpg"
         },
         {
@@ -63,19 +79,14 @@
         },
         {
             title: "Heroes of the Storm",
-            description: "Командная MOBA с героями из разных игр Blizzard.",
+            description: "Командная MOBA-игра с героями из разных игр Blizzard.",
             img: "images/hots.jpg"
         },
         {
-            title: "Overwatch 2",
-            description: "Продолжение популярного командного шутера с новыми режимами и героями.",
-            img: "images/overwatch2.jpg"
+            title: "Overwatch",
+            description: "Продолжение популярного командного шутера с обновлёнными режимами и героями.",
+            img: "images/overwatch.jpg"
         },
-        {
-            title: "Diablo IV",
-            description: "Новая часть Diablo с открытым миром и совместным прохождением.",
-            img: "images/diablo4.jpg"
-        }
     ];
 
     const gamesList = document.getElementById("games-list");
@@ -94,9 +105,13 @@
     });
 </script>
 
+</body>
+</html>
+
 
 </body>
 </html>
+
 
 
 
